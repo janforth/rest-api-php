@@ -24,7 +24,7 @@ class HttpClient implements HttpClientInterface
      */
     protected $lastResponse;
 
-    public function __construct(Request $req = null)
+    public function __construct(Request|null $req = null)
     {
         $this->ch = curl_init();
 
@@ -34,7 +34,7 @@ class HttpClient implements HttpClientInterface
         }
     }
 
-    public function send(Request $req = null)
+    public function send(Request|null $req = null)
     {
         if ($req === null) {
             if ($this->activeRequest === null) {
@@ -99,7 +99,7 @@ class HttpClient implements HttpClientInterface
      * @param Request $req
      * @return HttpClientInterface
      */
-    public function setActiveRequest(Request $req)
+    public function setActiveRequest(Request|null $req)
     {
         $this->activeRequest = $req;
 

@@ -13,18 +13,18 @@ interface HttpClientInterface
     /**
      * Executes the currently active request or $req if it is set.
      *
-     * @param Request $req
+     * @param Request|null $req
      * @return Response
      */
-    public function send(Request $req = null);
+    public function send(Request|null $req = null);
 
     /**
      * Sets the current request to be activated to $req
      *
-     * @param Request $req
+     * @param Request|null $req
      * @return HttpClientInterface
      */
-    public function setActiveRequest(Request $req);
+    public function setActiveRequest(Request|null $req);
 
     /**
      * Returns the lastResponse of the last request that was send.
