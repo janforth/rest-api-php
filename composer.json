@@ -1,5 +1,5 @@
 {
-    "name": "spryng/rest-api-php",
+    "name": "janforth/rest-api-php",
     "description": "Implementation of the REST API in PHP",
     "type": "library",
     "license": "BSD-2-Clause",
@@ -21,7 +21,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Spryng\\SpryngRestApi\\": "src/Spryng/SpryngRestApi"
+          "Janforth\\RestApi\\": "src/"
         }
-    }
+    },
+  "require": {
+    "php": ">=8.1"
+  }
 }
